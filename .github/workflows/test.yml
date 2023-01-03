@@ -21,4 +21,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          milliseconds: 1000
+          webhook_url: https://hook.integromat.com/confidential
+          event: ${{ toJSON(github.event) }}
+          monday_label: Testing
